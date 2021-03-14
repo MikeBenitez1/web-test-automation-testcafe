@@ -7,7 +7,7 @@ class LoginPage {
         this.usernameField = Selector('#user-name')
         this.passwordField = Selector('#password')
         this.loginButton = Selector('#login-button')
-        this.errorMessage = Selector('h3').withText('UsernameWW and password do not match any user in this service')
+        this.errorMessage = Selector('h3').withText('Username and password do not match any user in this service')
     }
     
     async submitLoginForm(username, password)    {
@@ -19,3 +19,4 @@ class LoginPage {
 }
 
 export default new LoginPage
+
