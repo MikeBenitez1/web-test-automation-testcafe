@@ -5,7 +5,8 @@ import ProductsPage from '../pages/ProductsPage'
 
 class CartPage {
     constructor(){
-        this.pageTitle = Selector('div.subheader').withText('Your Cart')
+        this.pageTitle = Selector('div.subheader').withExactText('Your Cart')
+        this.checkoutButton = Selector('a.btn_action.checkout_button').withText('CHECKOUT')
     }
 
     async verifySauceLabsBackpackOnCart(){
@@ -21,3 +22,4 @@ class CartPage {
 }
 
 export default new CartPage
+

@@ -13,3 +13,9 @@ export const CREDENTIALS = {
 
 }
 
+export const USER_INFO = {
+        FIRST_NAME: process.env.FIRST_NAME,
+        LAST_NAME: process.env.LAST_NAME,
+        POSTAL_CODE: process.env.POSTAL_CODE
+}
+
