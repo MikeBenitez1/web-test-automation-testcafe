@@ -1,0 +1,15 @@
+{
+  "name": "testcafe-session-1",
+  "version": "1.0.0",
+  "description": "TestCafe session 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe"
+  },
+  "author": "Mike Benitez",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "testcafe": "^1.12.0"
+  }
+}

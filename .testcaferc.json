@@ -1,0 +1,17 @@
+{
+    "browsers": "all",
+    "reporter": [
+        {
+            "name": "spec"
+        },
+        {
+            "name": "json",
+            "output": "results/reports/report.json"
+        }
+    ],
+    "screenshots": {
+        "path": "results/screenshots",
+        "takeOnFails": true,
+        "fullPage": true
+    }
+}
