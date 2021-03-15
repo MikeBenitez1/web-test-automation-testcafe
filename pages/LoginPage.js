@@ -16,6 +16,10 @@ class LoginPage {
         .typeText(this.passwordField, password)
         .click(this.loginButton)
     }
+    async validateLoginPage() {
+        await t
+        .expect(this.loginButton.exists).ok()
+    }
 }
 
 export default new LoginPage

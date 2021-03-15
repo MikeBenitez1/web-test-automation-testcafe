@@ -9,10 +9,15 @@ class ProductsPage {
         this.hamburguerButton = Selector('#react-burger-menu-btn')
         this.logoutButton = Selector('#logout_sidebar_link')
         this.cartButton = Selector('#shopping_cart_container > a > svg')
-        this.SauceLabsBackpackButton = Selector('div.inventory_item_name').withExactText('Sauce Labs Backpack') 
-        this.SauceLabsBikeLightButton = Selector('div.inventory_item_name').withExactText('Sauce Labs Bike Light') 
+        this.SauceLabsBackpackLink = Selector('div.inventory_item_name').withExactText('Sauce Labs Backpack') 
+        this.SauceLabsBikeLightLink = Selector('div.inventory_item_name').withExactText('Sauce Labs Bike Light') 
     }
 
+    async validateProductsPage(){
+        await t
+        .expect(this.pageTitle.exists).ok()
+    }
+    
     async logoutProcess()    {
         await t
         .click(this.hamburguerButton)
@@ -26,16 +31,26 @@ class ProductsPage {
 
     async addSauceLabsBackpackToCart(){
         await t
-        .click(this.SauceLabsBackpackButton)
+        .click(this.SauceLabsBackpackLink)
         .click(ProductDetailsPage.addToCartButton)
         .click(ProductDetailsPage.backToProductsButton)
     }
 
     async addSauceLabsBikeLightToCart(){
         await t
-        .click(this.SauceLabsBikeLightButton)
+        .click(this.SauceLabsBikeLightLink)
         .click(ProductDetailsPage.addToCartButton)
         .click(ProductDetailsPage.backToProductsButton)
+    }
+
+    async verifySauceLabsBackpackItem(){
+        await t
+        .expect(this.SauceLabsBackpackLink.exists).ok()
+    }
+
+    async verifySauceLabsBikeLightItem(){
+        await t
+        .expect(this.SauceLabsBikeLightLink.exists).ok()
     }
 
 }

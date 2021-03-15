@@ -3,5 +3,5 @@
 /node_modules
 
 
-# NOTE I know that .env is not recommended to upload to github but I will do an exception this time due this is a training/workclass
-# To facilitate to you, if you want to execute the TCs.
+# NOTE: I know that .env is not recommended to upload to github but I will do an exception this time due this is a training/workclass
+# and to facilitate to you, if you want to execute the TCs.

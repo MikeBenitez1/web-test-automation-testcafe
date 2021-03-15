@@ -1,5 +1,4 @@
 import {Selector, t} from 'testcafe'
-import ProductsPage from '../pages/ProductsPage'
 
 // Class with Cart Page elements and common methods
 
@@ -9,14 +8,14 @@ class CartPage {
         this.checkoutButton = Selector('a.btn_action.checkout_button').withText('CHECKOUT')
     }
 
-    async verifySauceLabsBackpackOnCart(){
+    async validateCartPage(){
         await t
-        .expect(ProductsPage.SauceLabsBackpackButton.exists).ok()
+        .expect(this.pageTitle.exists).ok()
     }
 
-    async verifySauceLabsBikeLightOnCart(){
+    async goToCheckout(){
         await t
-        .expect(ProductsPage.SauceLabsBikeLightButton.exists).ok()
+        .click(this.checkoutButton)
     }
 
 }
