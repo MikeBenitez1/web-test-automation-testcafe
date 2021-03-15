@@ -10,7 +10,7 @@ class CheckoutPage {
         this.lastNameField = Selector('#last-name')
         this.PostalCodeField = Selector('#postal-code')
         this.continueButton = Selector('input.btn_primary.cart_button')
-    }
+    };
 
     async submitUserForm(firstName, lastName, postalCode)    {
         await t
@@ -18,9 +18,9 @@ class CheckoutPage {
         .typeText(this.lastNameField, lastName)
         .typeText(this.PostalCodeField, postalCode)
         .click(this.continueButton)
-    }
+    };
 
-}
+};
 
 export default new CheckoutPage
 

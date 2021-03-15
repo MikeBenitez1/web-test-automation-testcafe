@@ -8,8 +8,8 @@ class ProductDetailsPage {
         this.backToProductsButton = Selector('button.inventory_details_back_button')
         this.SauceLabsBikeLightDetails = Selector('div.inventory_details_name').withExactText('Sauce Labs Bike Light')
         this.SauceLabsBackpackDetails = Selector('div.inventory_details_name').withExactText('Sauce Labs Backpack')
-    }
-}
+    };
+};
 
 export default new ProductDetailsPage
 

@@ -16,25 +16,25 @@ fixture("E2E Test Cases Session 1")
 test.meta("testID","TC-01")('Login with a valid user', async t =>{
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_DATA.VALID_USERNAME, CREDENTIALS.VALID_DATA.PASSWORD)
     await ProductsPage.validateProductsPage()
-})
+});
 
 test.meta("testID","TC-02")('Login with invalid user', async t =>{
     await LoginPage.submitLoginForm(CREDENTIALS.INVALID_DATA.INVALID_USERNAME, CREDENTIALS.VALID_DATA.PASSWORD)
     await t.expect(LoginPage.errorMessage.exists).ok()
-})
+});
 
 test.meta("testID","TC-03")('Logout from products page', async t =>{
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_DATA.VALID_USERNAME, CREDENTIALS.VALID_DATA.PASSWORD)
     await ProductsPage.validateProductsPage()
     await ProductsPage.logoutProcess()
     await LoginPage.validateLoginPage()
-})
+});
 
 test.meta("testID","TC-04")('Navigate to shopping cart', async t =>{
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_DATA.VALID_USERNAME, CREDENTIALS.VALID_DATA.PASSWORD)
     await ProductsPage.goToCart()
     await CartPage.validateCartPage()
-})
+});
 
 test.meta("testID","TC-05")('Add a single item to the shopping cart', async t =>{
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_DATA.VALID_USERNAME, CREDENTIALS.VALID_DATA.PASSWORD)
@@ -42,7 +42,7 @@ test.meta("testID","TC-05")('Add a single item to the shopping cart', async t =>
     await ProductsPage.goToCart()
     await CartPage.validateCartPage()
     await ProductsPage.verifySauceLabsBackpackItem()
-})
+});
 
 test.meta("testID","TC-06")('Add multiple items to the shopping cart', async t =>{
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_DATA.VALID_USERNAME, CREDENTIALS.VALID_DATA.PASSWORD)
@@ -52,7 +52,7 @@ test.meta("testID","TC-06")('Add multiple items to the shopping cart', async t =
     await CartPage.validateCartPage()
     await ProductsPage.verifySauceLabsBackpackItem()
     await ProductsPage.verifySauceLabsBikeLightItem()
-})
+});
 
 test.meta("testID","TC-07")('Continue checkout with missing user information', async t =>{
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_DATA.VALID_USERNAME, CREDENTIALS.VALID_DATA.PASSWORD)

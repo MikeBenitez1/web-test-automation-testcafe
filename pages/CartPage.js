@@ -6,19 +6,19 @@ class CartPage {
     constructor(){
         this.pageTitle = Selector('div.subheader').withExactText('Your Cart')
         this.checkoutButton = Selector('a.btn_action.checkout_button').withText('CHECKOUT')
-    }
+    };
 
     async validateCartPage(){
         await t
         .expect(this.pageTitle.exists).ok()
-    }
+    };
 
     async goToCheckout(){
         await t
         .click(this.checkoutButton)
-    }
+    };
 
-}
+};
 
 export default new CartPage
 
